@@ -17,7 +17,7 @@ resource "aws_ecr_repository" "app_repo" {
 resource "aws_security_group" "app_sg" {
   name        = "app-sg"
   description = "Allow HTTP traffic"
-  vpc_id      = "vpc-06d5e46db3782bb15"
+  vpc_id      = "vpc-0bbaee32b674b4dcf"
 
   ingress {
     from_port   = 80
@@ -52,7 +52,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-01b6d88af12965bb6"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.app_sg.name]
-  key_name      = "devops-key"
+  key_name      = "devops-poc"
   
   user_data     = file("user_data.sh")
 
