@@ -3,7 +3,7 @@
 
 A simple Flask microservice that fetches a message from AWS SSM Parameter Store and returns it on `/`.
 
-## Usage
+### Usage
 
 ### 1. Set Parameter in AWS SSM
 
